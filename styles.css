@@ -1,19 +1,175 @@
-/* charity: water Brand Colors & Fonts
+/* Main body styles */
+body {
+  margin: 0;
+  font-family: 'PT Sans', sans-serif; /* Modern, easy-to-read font */
+  color: #333;                        /* Dark text for readability */
+  background: #f7f9fb;                /* Light background color */
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+/* Hero section with background image and centered content */
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') 
+    no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+/* Overlay for hero text readability */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  width: 100%;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+/* General section styles */
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
 
-*/
+/* Section backgrounds */
+.light {
+  background-color: #fff;
+}
+.blue {
+  background-color: #0099ff;
+  color: white;
+}
+.yellow {
+  background-color: #ffeb3b;
+  color: #333;
+}
+
+/* Light yellow background for special impact story section */
+.yellow-light {
+  background-color: #fffde7; /* Very light yellow */
+  color: #333;
+}
+
+/* Section headings */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Section paragraphs */
+.section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Links inside sections */
+.section a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Style for the contact section links */
+#contact a {
+  color: #0077cc;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Impact story image styles */
+.impact-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Donate Now button styles */
+.btn {
+  display: inline-block;
+  background-color: #0077cc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* Image zoom on hover */
+.impact-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Quote styling for the impact story */
+.quote {
+  font-style: italic;
+  color: #0077cc;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  background: #f0f7ff;
+  border-left: 4px solid #0099ff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+/* Highlight important numbers or facts */
+.highlight {
+  color: #0099ff;
+  font-weight: bold;
+}
+
+/* Section fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer styles */
+.footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive styles for tablets and mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    padding: 2rem;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  .section p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .impact-img {
+    width: 90%;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
